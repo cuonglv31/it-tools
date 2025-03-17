@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm && pnpm i --frozen-lockfile
 COPY . .
-RUN pnpm build
+# RUN pnpm build
 
 # production stage
 FROM nginx:stable-alpine AS production-stage
